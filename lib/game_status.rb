@@ -4,3 +4,47 @@ def position_taken?(board, index)
 end
 
 # Define your WIN_COMBINATIONS constant
+WIN_COMBINATIONS = [
+  [0, 1, 2], 
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 4, 8],
+  [6, 4, 2],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8]]
+
+def won?(board)
+  
+end
+
+def full?(board)
+  if board.include?(" ") || board.include(nil)
+    return FALSE
+  else
+    return true
+  end
+end
+
+def draw?(board)
+  if full(board)
+    if won(board) == nil
+      return true
+    else
+      return false
+    end
+  else
+    return false
+  end
+end
+
+def over?(board)
+  if draw?(board) || won?(board) || full?(board)
+    return true
+  else
+    return false
+  end
+end
+
+def winner(board)
+  
