@@ -56,4 +56,4 @@ def winner(board)
   return board[won?(board)[0]]
 end
 
-puts win?(["O", "O", " ", "X", "X", "X", " ", " ", " "])
+puts won?(["O", "O", " ", "X", "X", "X", " ", " ", " "])
