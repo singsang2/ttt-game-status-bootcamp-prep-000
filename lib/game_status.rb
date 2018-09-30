@@ -18,15 +18,9 @@ def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
     if (board[win_combination[0]]==board[win_combination[1]] && board[win_combination[1]]==board[win_combination[2]])&& position_taken?(board,win_combination[0])
       return win_combination
-    else
-      return false
     end
   end
-end
-
-WIN_COMBINATIONS.each do |x|
-  board = ["O", "O", " ", "X", "X", "X", " ", " ", " "]
-  puts "#{board[x[0]]} #{board[x[1]]} #{board[x[2]]}"
+  return false
 end
 
 def full?(board)
@@ -60,5 +54,3 @@ end
 def winner(board)
   return board[won?(board)[0]]
 end
-
-puts won?(["O", "O", " ", "X", "X", "X", " ", " ", " "])
