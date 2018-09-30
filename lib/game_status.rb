@@ -18,6 +18,9 @@ def won?(board)
   WIN_COMBINATIONS.each do |win_combination|
     if board[win_combination[0]]==board[win_combination[1]] && board[win_combination[1]]==board[win_combination[2]]
       return win_combination
+    else
+      return false
+    end
 end
 
 def full?(board)
@@ -30,7 +33,7 @@ end
 
 def draw?(board)
   if full(board)
-    if won(board) == nil
+    if won(board) == nil || won(board) == false
       return true
     else
       return false
