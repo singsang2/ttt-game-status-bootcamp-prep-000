@@ -24,6 +24,10 @@ def won?(board)
   end
 end
 
+WIN_COMBINATION.each do |x|
+  puts x
+end
+
 def full?(board)
   if board.include?(" ") || board.include?(nil)
     return FALSE
