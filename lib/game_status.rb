@@ -25,7 +25,8 @@ def won?(board)
 end
 
 WIN_COMBINATIONS.each do |x|
-  puts "#{x[0]} #{x[1]} #{x[2]}"
+  board = ["O", "O", " ", "X", "X", "X", " ", " ", " "]
+  puts "#{board[x[0]]} #{board[x[0]]} #{board[x[0]]}"
 end
 
 def full?(board)
