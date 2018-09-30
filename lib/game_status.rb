@@ -25,7 +25,7 @@ def won?(board)
 end
 
 WIN_COMBINATIONS.each do |x|
-  puts x.inspect.class
+  puts x.class
 end
 
 def full?(board)
