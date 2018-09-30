@@ -24,7 +24,7 @@ def won?(board)
   end
 end
 
-WIN_COMBINATION.each do |x|
+WIN_COMBINATIONs.each do |x|
   puts x
 end
 
